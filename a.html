@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=false;" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>我们结婚啦</title>
+    <link href="Content/cards.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="Content/font-awesome.min.css">
+    <!-- lottery - canvas擦除效果-->
+    <script type="text/javascript" src="Scripts/lottery.js"></script>
+</head>
+<body>
+<span id="drawPercent">0%</span>
+
+<div id="lotteryContainer"></div>
+<div id="music_rotate"></div>
+<div id="music_1_slip"></div>
+<div id="music_2_slip"></div>
+<div id="music_3_slip"></div>
+<div id="music_4_slip"></div>
+<div class="all_function" id="all_func">
+    <div id="mainswitch" class="mainswitch">
+        <div class="mainswitchtext" id="switchs">目录</div>
+        <div class="mainswitchbg" id="switch_btn"></div>
+        <input type="hidden" id="show_menu" value="1">
+    </div>
+    <div class="btn  " id="4switch">
+        <div class="cardsbtn bg-btn-inv"></div>
+        <div class="cardsbtn bg-btn-thumb"></div>
+        <div class="cardsbtn bg-btn-comment"></div>
+        <div class="cardsbtn bg-btn-video" style=" "></div>
+        <div class="cardsbtn bg-btn-map"></div>
+    </div>
+    <ul class=" ">
+        <li>
+            <div class="circletext1 " id="circle-inv">请柬</div>
+        </li>
+        <li>
+            <div class="circletext2 " id="circle-thumb">赞</div>
+        </li>
+        <li>
+            <div class="circletext4 " id="circle-comment">应邀</div>
+        </li>
+        <li style=" ">
+            <a href="http://v.qq.com/iframe/player.html?vid=l0178qfz865" style="text-decoration:none;color: inherit;">
+                <div class="circletext5 " id="circle-video">视频</div>
+            </a>
+        </li>
+        <li>
+            <div class="circletext3 " id="circle-map" link="http://m.amap.com/navi/?dest=121.499712,31.235998&destName=香格里拉大酒店||上海市浦东新区富城路33号&key=da975a4eb7d6212541f780b4e3176446">地图</div>
+        </li>
+    </ul>
+    <div class="line " id="line"></div>
+    <div class="first part-inv" id="first">
+        <div class="lettercontainer" style="background-image:url(Images/2015062005565333707.jpg); background-size: 100% 100%;"></div>
+    </div>
+    <div class="second part-thumb" id="second">
+        <div class="goods">
+            <div class="m-like"></div>
+            <div class="pic" id="good_background"></div>
+            <div class="textcount" id="good_text"></div>
+        </div>
+    </div>
+    <div class="none part-map" id="none"></div>
+    <div class="fourth part-video" id="five">
+        <div class="comcontainer">
+            <div id="" style="height:90%;">
+                <div id="youkuplayer" style="width:100%;height:334px;z-index: 9999;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrapper" id="wrap" style="display:none">
+    <section class="page page0">
+        <div class="background" id="background">
+            <img width="100%" src="Picture/bg1.png">
+        </div>
+        <div class="info">
+            <div class="dfz logo ">
+                <img width="100%" src="Picture/002.png">
+            </div>
+            <div class="names dgd1 ">
+                <div class="xl_show">xx</div>
+                <div class="xn_show">xx</div>
+            </div>
+            <div class="sj dgd2 "> <span class="show_date">2016年01月18日</span>
+
+            </div>
+        </div>
+    </section>
+    <section class="page page1">
+        <div class="background"></div>
+        <div class="text2">Brief is life, but love is long.</div>
+        <div class="start"></div>
+    </section>
+    <section class="page page2">
+        <div class="card">
+            <div class="background"></div>
+            <div class="frontbackground"></div>
+        </div>
+        <div class="text3">Brief is life, but love is long.</div>
+        <div class="start"></div>
+    </section>
+    <section class="page page3">
+        <div class="background effect1"></div>
+        <div class="text4">Brief is life, but love is long.</div>
+        <div class="start"></div>
+    </section>
+    <section class="page page4">
+        <div class="card">
+            <div class="background"></div>
+            <div class="frontbackground"></div>
+        </div>
+        <div class="text5">Brief is life, but love is long.</div>
+        <div class="start"></div>
+    </section>
+    <section class="page page5">
+        <div class="background effect1"></div>
+        <div class="text6">Brief is life, but love is long.</div>
+        <div class="start"></div>
+    </section>
+    <section class="page page6">
+        <div class="card">
+            <div class="background"></div>
+            <div class="frontbackground"></div>
+        </div>
+        <div class="text5">Brief is life, but love is long.</div>
+        <div class="start"></div>
+    </section>
+    <section class="page page-heart">
+        <div class="meteorShowerBG2" id="meteorShowerBG2"></div>
+        <div class="m-meteorShower"></div>
+        <div class="heart" id="heartclick"></div>
+    </section>
+</div>
+<script type="text/javascript" src="Scripts/zepto.min1.js"></script>
+<script type="text/javascript" src="Scripts/diy.js"></script>
+<script type="text/javascript" src="Scripts/halo.js"></script>
+<script type="text/javascript" src="Scripts/card_modules.js"></script>
+<script type="text/javascript" src="Scripts/cards.js"></script>
+</body>
+</html>
